@@ -22,25 +22,382 @@ export default function QuantumAxisLanding() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
-      {/* Animated Background Elements */}
+      {/* Connected Glowing Lines Network */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <svg className="w-full h-full" viewBox="0 0 1920 1080">
+          <defs>
+            <linearGradient id="lineGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgba(59, 130, 246, 0)" />
+              <stop offset="50%" stopColor="rgba(59, 130, 246, 0.8)" />
+              <stop offset="100%" stopColor="rgba(59, 130, 246, 0)" />
+            </linearGradient>
+            <linearGradient id="lineGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgba(147, 51, 234, 0)" />
+              <stop offset="50%" stopColor="rgba(147, 51, 234, 0.6)" />
+              <stop offset="100%" stopColor="rgba(147, 51, 234, 0)" />
+            </linearGradient>
+            <linearGradient id="lineGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgba(6, 182, 212, 0)" />
+              <stop offset="50%" stopColor="rgba(6, 182, 212, 0.7)" />
+              <stop offset="100%" stopColor="rgba(6, 182, 212, 0)" />
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
 
-        {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 4}s`,
-            }}
+          {/* Horizontal Data Lines */}
+          <line
+            x1="0"
+            y1="200"
+            x2="1920"
+            y2="180"
+            stroke="url(#lineGradient1)"
+            strokeWidth="2"
+            filter="url(#glow)"
+            className="animate-pulse"
+          >
+            <animate attributeName="stroke-dasharray" values="0,1000;1000,0;0,1000" dur="8s" repeatCount="indefinite" />
+          </line>
+          <line
+            x1="0"
+            y1="400"
+            x2="1920"
+            y2="420"
+            stroke="url(#lineGradient2)"
+            strokeWidth="1.5"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "2s" }}
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,1000;1000,0;0,1000"
+              dur="10s"
+              repeatCount="indefinite"
+            />
+          </line>
+          <line
+            x1="0"
+            y1="600"
+            x2="1920"
+            y2="580"
+            stroke="url(#lineGradient3)"
+            strokeWidth="2"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "4s" }}
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,1000;1000,0;0,1000"
+              dur="12s"
+              repeatCount="indefinite"
+            />
+          </line>
+          <line
+            x1="0"
+            y1="800"
+            x2="1920"
+            y2="820"
+            stroke="url(#lineGradient1)"
+            strokeWidth="1"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "6s" }}
+          >
+            <animate attributeName="stroke-dasharray" values="0,1000;1000,0;0,1000" dur="9s" repeatCount="indefinite" />
+          </line>
+
+          {/* Vertical Data Lines */}
+          <line
+            x1="300"
+            y1="0"
+            x2="320"
+            y2="1080"
+            stroke="url(#lineGradient2)"
+            strokeWidth="1.5"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "1s" }}
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,1080;1080,0;0,1080"
+              dur="11s"
+              repeatCount="indefinite"
+            />
+          </line>
+          <line
+            x1="600"
+            y1="0"
+            x2="580"
+            y2="1080"
+            stroke="url(#lineGradient3)"
+            strokeWidth="2"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "3s" }}
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,1080;1080,0;0,1080"
+              dur="13s"
+              repeatCount="indefinite"
+            />
+          </line>
+          <line
+            x1="1200"
+            y1="0"
+            x2="1220"
+            y2="1080"
+            stroke="url(#lineGradient1)"
+            strokeWidth="1"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "5s" }}
+          >
+            <animate attributeName="stroke-dasharray" values="0,1080;1080,0;0,1080" dur="7s" repeatCount="indefinite" />
+          </line>
+          <line
+            x1="1500"
+            y1="0"
+            x2="1480"
+            y2="1080"
+            stroke="url(#lineGradient2)"
+            strokeWidth="1.5"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "7s" }}
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,1080;1080,0;0,1080"
+              dur="14s"
+              repeatCount="indefinite"
+            />
+          </line>
+
+          {/* Diagonal Connection Lines */}
+          <line
+            x1="0"
+            y1="0"
+            x2="800"
+            y2="400"
+            stroke="url(#lineGradient1)"
+            strokeWidth="1"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "2.5s" }}
+          >
+            <animate attributeName="stroke-dasharray" values="0,900;900,0;0,900" dur="15s" repeatCount="indefinite" />
+          </line>
+          <line
+            x1="1920"
+            y1="0"
+            x2="1200"
+            y2="600"
+            stroke="url(#lineGradient3)"
+            strokeWidth="1.5"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "4.5s" }}
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,1200;1200,0;0,1200"
+              dur="16s"
+              repeatCount="indefinite"
+            />
+          </line>
+          <line
+            x1="0"
+            y1="1080"
+            x2="600"
+            y2="200"
+            stroke="url(#lineGradient2)"
+            strokeWidth="1"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "6.5s" }}
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,1100;1100,0;0,1100"
+              dur="18s"
+              repeatCount="indefinite"
+            />
+          </line>
+          <line
+            x1="1920"
+            y1="1080"
+            x2="1000"
+            y2="300"
+            stroke="url(#lineGradient1)"
+            strokeWidth="2"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "8.5s" }}
+          >
+            <animate
+              attributeName="stroke-dasharray"
+              values="0,1300;1300,0;0,1300"
+              dur="20s"
+              repeatCount="indefinite"
+            />
+          </line>
+
+          {/* Data Node Connections */}
+          <circle
+            cx="300"
+            cy="200"
+            r="4"
+            fill="rgba(59, 130, 246, 0.8)"
+            filter="url(#glow)"
+            className="animate-pulse"
           />
-        ))}
+          <circle
+            cx="600"
+            cy="400"
+            r="3"
+            fill="rgba(147, 51, 234, 0.6)"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
+          <circle
+            cx="1200"
+            cy="300"
+            r="5"
+            fill="rgba(6, 182, 212, 0.7)"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "2s" }}
+          />
+          <circle
+            cx="1500"
+            cy="600"
+            r="3"
+            fill="rgba(59, 130, 246, 0.8)"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "3s" }}
+          />
+          <circle
+            cx="800"
+            cy="800"
+            r="4"
+            fill="rgba(147, 51, 234, 0.6)"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "4s" }}
+          />
+          <circle
+            cx="400"
+            cy="700"
+            r="3"
+            fill="rgba(6, 182, 212, 0.7)"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "5s" }}
+          />
+
+          {/* Connecting Lines Between Nodes */}
+          <line
+            x1="300"
+            y1="200"
+            x2="600"
+            y2="400"
+            stroke="url(#lineGradient1)"
+            strokeWidth="1"
+            filter="url(#glow)"
+            className="animate-pulse"
+          >
+            <animate attributeName="stroke-dasharray" values="0,360;360,0;0,360" dur="6s" repeatCount="indefinite" />
+          </line>
+          <line
+            x1="600"
+            y1="400"
+            x2="1200"
+            y2="300"
+            stroke="url(#lineGradient2)"
+            strokeWidth="1"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "1s" }}
+          >
+            <animate attributeName="stroke-dasharray" values="0,640;640,0;0,640" dur="8s" repeatCount="indefinite" />
+          </line>
+          <line
+            x1="1200"
+            y1="300"
+            x2="1500"
+            y2="600"
+            stroke="url(#lineGradient3)"
+            strokeWidth="1"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "2s" }}
+          >
+            <animate attributeName="stroke-dasharray" values="0,420;420,0;0,420" dur="7s" repeatCount="indefinite" />
+          </line>
+          <line
+            x1="800"
+            y1="800"
+            x2="400"
+            y2="700"
+            stroke="url(#lineGradient1)"
+            strokeWidth="1"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "3s" }}
+          >
+            <animate attributeName="stroke-dasharray" values="0,450;450,0;0,450" dur="9s" repeatCount="indefinite" />
+          </line>
+          <line
+            x1="400"
+            y1="700"
+            x2="1200"
+            y2="300"
+            stroke="url(#lineGradient2)"
+            strokeWidth="1"
+            filter="url(#glow)"
+            className="animate-pulse"
+            style={{ animationDelay: "4s" }}
+          >
+            <animate attributeName="stroke-dasharray" values="0,890;890,0;0,890" dur="11s" repeatCount="indefinite" />
+          </line>
+
+          {/* Additional Background Blur Elements */}
+          <circle
+            cx="200"
+            cy="300"
+            r="150"
+            fill="rgba(59, 130, 246, 0.05)"
+            className="animate-pulse"
+            style={{ animationDelay: "1s" }}
+          />
+          <circle
+            cx="1600"
+            cy="700"
+            r="120"
+            fill="rgba(147, 51, 234, 0.05)"
+            className="animate-pulse"
+            style={{ animationDelay: "3s" }}
+          />
+          <circle
+            cx="960"
+            cy="150"
+            r="100"
+            fill="rgba(6, 182, 212, 0.05)"
+            className="animate-pulse"
+            style={{ animationDelay: "5s" }}
+          />
+        </svg>
       </div>
 
       {/* Mouse Follower */}
