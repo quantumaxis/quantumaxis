@@ -414,7 +414,43 @@ export default function QuantumAxisLanding() {
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
+              <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Quantum orbital rings */}
+                <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.6" />
+                <ellipse
+                  cx="12"
+                  cy="12"
+                  rx="8"
+                  ry="3"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  fill="none"
+                  opacity="0.8"
+                />
+                <ellipse
+                  cx="12"
+                  cy="12"
+                  rx="3"
+                  ry="8"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  fill="none"
+                  opacity="0.8"
+                />
+
+                {/* Central quantum core */}
+                <circle cx="12" cy="12" r="2" fill="currentColor" opacity="0.9" />
+
+                {/* Axis lines */}
+                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" strokeWidth="1.5" opacity="0.7" />
+                <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" strokeWidth="1.5" opacity="0.7" />
+
+                {/* Quantum particles */}
+                <circle cx="6" cy="8" r="1" fill="currentColor" opacity="0.8" />
+                <circle cx="18" cy="16" r="1" fill="currentColor" opacity="0.8" />
+                <circle cx="8" cy="18" r="1" fill="currentColor" opacity="0.8" />
+                <circle cx="16" cy="6" r="1" fill="currentColor" opacity="0.8" />
+              </svg>
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Quantum Axis
@@ -597,7 +633,43 @@ export default function QuantumAxisLanding() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-6">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Quantum orbital rings */}
+                <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.6" />
+                <ellipse
+                  cx="12"
+                  cy="12"
+                  rx="8"
+                  ry="3"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  fill="none"
+                  opacity="0.8"
+                />
+                <ellipse
+                  cx="12"
+                  cy="12"
+                  rx="3"
+                  ry="8"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  fill="none"
+                  opacity="0.8"
+                />
+
+                {/* Central quantum core */}
+                <circle cx="12" cy="12" r="2" fill="currentColor" opacity="0.9" />
+
+                {/* Axis lines */}
+                <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" strokeWidth="1.5" opacity="0.7" />
+                <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" strokeWidth="1.5" opacity="0.7" />
+
+                {/* Quantum particles */}
+                <circle cx="6" cy="8" r="1" fill="currentColor" opacity="0.8" />
+                <circle cx="18" cy="16" r="1" fill="currentColor" opacity="0.8" />
+                <circle cx="8" cy="18" r="1" fill="currentColor" opacity="0.8" />
+                <circle cx="16" cy="6" r="1" fill="currentColor" opacity="0.8" />
+              </svg>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Quantum Axis
